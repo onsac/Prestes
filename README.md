@@ -9,8 +9,6 @@
 
 <p align="center">
   Projeto de Digitalização de Processos - Fase 01
-  <br>
-  <a href="https://onsac.com/"><strong>Conheça mais sobre nosso serviço »</strong></a>
   </p>
 
 # Prestes
