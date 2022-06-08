@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://onsac.com/">
-    <img src="https://github.com/onsac/Prestes/blob/main/Projeto%20OnSAC-Prestes.png" >
+    <img src="https://github.com/onsac/Prestes/blob/main/Imagens/Projeto%20OnSAC-Prestes.png" >
   </a>
 </p>
 
