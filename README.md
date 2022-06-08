@@ -25,7 +25,7 @@
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
  ```
 
-## AIO-QUOTE – Contrato de APIs Origem e Destino
+## Contrato de APIs Origem e Destino
 
 > **Atividade 8 , Atividade 9 e Atividade 10 ** : Busca um contrato de vendas.
 
