@@ -17,7 +17,14 @@
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/eletronic-invoice-bills/ 
 ```
-
+* **Atividade Atividade 17 ** Atualiza o título no Sienge.
+```sh 
+  URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
+```
+* **Atividade Atividade 18 e Atividade 19 ** Inserção do título no Sienge.
+```sh 
+  URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/ 
+```
 ## Contrato de APIs Origem e Destino
 
 > **Atividade 3 ** : Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
@@ -47,4 +54,70 @@
   ]
 }
 ```
+> **Atividade 17 ** : Atualiza o título no Sienge.
 
+```diff
++ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
+```
+
+```sh
+{
+  "documentIdentificationId": "NF",
+  "documentNumber": "AX123"
+}
+```
+> **Atividade 18 e Atividade 19 ** : Inserção do título no Sienge.
+
+```diff
++ API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/
+```
+
+```sh
+{
+  "debtorId": 0,
+  "creditorId": 0,
+  "documentIdentificationId": "string",
+  "documentNumber": "string",
+  "issueDate": "2018-12-22",
+  "installmentsNumber": 0,
+  "indexId": 0,
+  "baseDate": "2018-12-22",
+  "dueDate": "2018-12-22",
+  "billDate": "2018-12-22",
+  "totalInvoiceAmount": 0,
+  "notes": "string",
+  "discount": 0,
+  "budgetCategories": [
+    {
+      "costCenterId": 0,
+      "paymentCategoriesId": "string",
+      "percentage": 0
+    }
+  ],
+  "taxes": [
+    {
+      "taxId": 0,
+      "ibgeCityId": "4205407",
+      "rate": 0,
+      "amount": 0,
+      "taxableBaseAmount": 0,
+      "taxRateMarker": 0,
+      "usesIncomeTaxTable": true
+    }
+  ],
+  "departmentsCost": [
+    {
+      "departmentId": 0,
+      "percentage": 0
+    }
+  ],
+  "buildingsCost": [
+    {
+      "buildingId": 0,
+      "buildingUnitId": 0,
+      "costEstimationSheetId": "string",
+      "percentage": 0
+    }
+  ]
+}
+```
