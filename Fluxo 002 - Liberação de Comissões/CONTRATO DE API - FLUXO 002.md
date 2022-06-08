@@ -13,21 +13,21 @@
 
 ## APIs – SIENGE
 
-* **Atividade 3 ** Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
+* **Atividade 3** Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/eletronic-invoice-bills/ 
 ```
-* **Atividade Atividade 17 ** Atualiza o título no Sienge.
+* **Atividade Atividade 17** Atualiza o título no Sienge.
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
 ```
-* **Atividade Atividade 18 e Atividade 19 ** Inserção do título no Sienge.
+* **Atividade Atividade 18 e Atividade 19** Inserção do título no Sienge.
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/ 
 ```
 ## Contrato de APIs Origem e Destino
 
-> **Atividade 3 ** : Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
+> **Atividade 3** : Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
 
 ```diff
 + API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/eletronic-invoice-bills/ 
@@ -54,7 +54,7 @@
   ]
 }
 ```
-> **Atividade 17 ** : Atualiza o título no Sienge.
+> **Atividade 17** : Atualiza o título no Sienge.
 
 ```diff
 + API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
@@ -66,7 +66,7 @@
   "documentNumber": "AX123"
 }
 ```
-> **Atividade 18 e Atividade 19 ** : Inserção do título no Sienge.
+> **Atividade 18 e Atividade 19** : Inserção do título no Sienge.
 
 ```diff
 + API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/
