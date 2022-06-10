@@ -82,7 +82,7 @@ Webhook
  ```
  ## APIs CVCRM
 
-> **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
+* **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
 
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/contratos
