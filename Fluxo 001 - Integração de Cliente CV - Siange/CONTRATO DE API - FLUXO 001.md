@@ -80,6 +80,71 @@ Webhook
  ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
  ```
+ ## APIs CVCRM
+
+> **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
+
+ ```sh 
+  URL PROD://integracao.cvcrm.com.br/api/v1/prestes/contratos
+```
+```sh
+{
+  "total": 22,
+  "offset": 0,
+  "limit": 30,
+  "contratos": [
+    {
+      "idcontrato": 1662,
+      "titulo": "Associado",
+      "tipo": "Distrato",
+      "criado": "2020-02-17 13:40:36",
+      "unidade": {
+        "unidades": [
+          {
+            "idunidade": 140,
+            "nome": "504"
+          }
+        ],
+        "perfil": {
+          "nome": "Titular da Reserva",
+          "sigla": "TR"
+        },
+        "previsao_entrega": "2021-02-01",
+        "porcentagem_total_estagio_obra_unidade": 22.27,
+        "etapa": {
+          "idetapa": 4,
+          "nome": "Única"
+        },
+        "bloco": {
+          "idbloco": 2216,
+          "nome": "Várias unidades"
+        },
+        "empreendimento": {
+          "idempreendimento": 3,
+          "nome": "9201 - Varándãs Do Garcia 9",
+          "porcentagem_total_estagio_obra": 50,
+          "permitir_criar_atendimento": true,
+          "foto": {
+            "nome": "construtor.jpg",
+            "tipo": "image/jpeg",
+            "tamanho": 2672,
+            "url": "https://relacionar.cvcrm.com.br/api/get/imagens/painel_cliente_logo/[[LARGURA]]/[[ALTURA]]/20210111152544_5ffc98284c62c.jpg"
+          }
+        },
+        "andar": "1º Andar",
+        "coluna": "3"
+      },
+      "arquivo": {
+        "nome": "ATO - Boleto _ 24_02_2019 - 3.pdf",
+        "tipo": "application/pdf",
+        "tamanho": "16298",
+        "url": "http://dev.cvcrm.com.br/api/get/download/reservas_contratos|2020|01|3867/20200514091903_5ebd373739148.pdf"
+      }
+    }
+  ]
+}
+```
+
 
 ## Contrato de APIs Origem e Destino
 
@@ -164,13 +229,10 @@ Webhook
   "financingStatus": "string"
 }
 ```
-
-## APIs CVCRM
-
 > **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
 
-```diff
-+ API GET://integracao.cvcrm.com.br/api/v1/prestes/contratos
+ ```diff
+  + API GET://integracao.cvcrm.com.br/api/v1/prestes/contratos
 ```
 ```sh
 {
