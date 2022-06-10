@@ -83,7 +83,7 @@ Webhook
 
 ## Contrato de APIs Origem e Destino
 
-> **Atividade 8 , Atividade 9 e Atividade 10 ** : Busca um contrato de vendas.
+> **Atividade 8 , Atividade 9 e Atividade 10** : Busca um contrato de vendas.
 
 ```diff
 + API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
@@ -167,7 +167,7 @@ Webhook
 
 ## APIs CVCRM
 
-> **Atividade 10.1, Atividade 11 e Atividade 12** : Retornar os contratos das unidades do cliente
+> **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
 
 ```diff
 + API GET://integracao.cvcrm.com.br/api/v1/prestes/contratos
