@@ -73,6 +73,10 @@ Webhook
           }]
       }
 ```
+* **Atividade 1.1**Consulta de Títulos - Boleto / Pix
+```sh
+{"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
+```
 ## APIs – SIENGE
 
 * **Atividade 8 , Atividade 9 e Atividade 10** Busca um contrato de vendas.
