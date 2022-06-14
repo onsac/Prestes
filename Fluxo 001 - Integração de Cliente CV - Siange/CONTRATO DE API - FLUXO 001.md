@@ -102,7 +102,6 @@ Webhook
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
 ```
-
 ## Contrato de APIs Origem e Destino
 
 > **Atividade 8 , Atividade 9 e Atividade 10** : Busca um contrato de vendas.
