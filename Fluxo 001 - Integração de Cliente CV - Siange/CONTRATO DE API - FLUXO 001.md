@@ -91,7 +91,7 @@ Webhook
 * **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
 
  ```sh 
-  URL PROD://integracao.cvcrm.com.br/api/v1/prestes/contratos
+  URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
 ```
 
 ## Contrato de APIs Origem e Destino
@@ -180,62 +180,148 @@ Webhook
 > **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
 
  ```diff
-  + API GET://integracao.cvcrm.com.br/api/v1/prestes/contratos
+  + API GET://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
 ```
 ```sh
 {
-  "total": 22,
-  "offset": 0,
-  "limit": 30,
-  "contratos": [
-    {
-      "idcontrato": 1662,
-      "titulo": "Associado",
-      "tipo": "Distrato",
-      "criado": "2020-02-17 13:40:36",
-      "unidade": {
-        "unidades": [
-          {
-            "idunidade": 140,
-            "nome": "504"
-          }
-        ],
-        "perfil": {
-          "nome": "Titular da Reserva",
-          "sigla": "TR"
-        },
-        "previsao_entrega": "2021-02-01",
-        "porcentagem_total_estagio_obra_unidade": 22.27,
-        "etapa": {
-          "idetapa": 4,
-          "nome": "Única"
-        },
-        "bloco": {
-          "idbloco": 2216,
-          "nome": "Várias unidades"
-        },
-        "empreendimento": {
-          "idempreendimento": 3,
-          "nome": "9201 - Varándãs Do Garcia 9",
-          "porcentagem_total_estagio_obra": 50,
-          "permitir_criar_atendimento": true,
-          "foto": {
-            "nome": "construtor.jpg",
-            "tipo": "image/jpeg",
-            "tamanho": 2672,
-            "url": "https://relacionar.cvcrm.com.br/api/get/imagens/painel_cliente_logo/[[LARGURA]]/[[ALTURA]]/20210111152544_5ffc98284c62c.jpg"
-          }
-        },
-        "andar": "1º Andar",
-        "coluna": "3"
+  "7367": {
+    "situacao": {
+      "idsituacao": "47",
+      "situacao": "Pode Faturar"
+    },
+    "imobiliaria": {
+      "email": "email_imobiliaria@mail.com",
+      "telefone": "(79) 99999-8888",
+      "cnpj": "12345678000123"
+    },
+    "unidade": {
+      "empreendimento": "Empreendimento Alegria",
+      "idempreendimento_int": "4502",
+      "etapa": "FASE 2",
+      "idetapa_int": "f2",
+      "bloco": "Bloco 01",
+      "idbloco_int": "035",
+      "unidade": "101",
+      "idunidade_cv": "27449",
+      "idunidade_int": "9",
+      "planta": null,
+      "tipologia": "2 Qts / 1 Suíte",
+      "posicao": "Sul",
+      "area_privativa": "100.00",
+      "andar": "1",
+      "coluna": "1",
+      "tipo": "apartamento",
+      "numeracao_deposito": "1",
+      "vagas_garagem": "1",
+      "area_garagem": "10.00",
+      "area_comum": "50.00",
+      "area_terreno": "120.00",
+      "fracao_ideal": "1.0000000"
+    },
+    "titular": {
+      "nome": "Cliente teste",
+      "idpessoa_cv": "16651",
+      "idpessoa_int": "0000361801",
+      "documento_tipo": "cpf",
+      "nascimento": "1996-01-23",
+      "documento": "05873544530",
+      "rg": "54343435",
+      "rg_orgao_emissor": "SSP-SE1",
+      "rg_data_emissao": "2019-08-01",
+      "estado_civil": "Solteiro(a)",
+      "profissao": "Promotor Público",
+      "logradouro": "Travessa",
+      "idlogradouro": "10",
+      "endereco": "Travessa Benjamin Constant",
+      "numero": "1020",
+      "complemento": "casa2",
+      "bairro": "Centro",
+      "cep": "49010100",
+      "cidade": "Aracaju",
+      "estado": "Sergipe",
+      "pais": "Brasil",
+      "telefone": "(22) 2222-22222",
+      "celular": "(98) 99999-7777",
+      "email": "email_titular@mail.com",
+      "sexo": "F",
+      "marketing_pos_venda": "Sergipe",
+      "como_ficou_sabendo": "sITE",
+      "renda_familiar": "23121.21"
+    },
+    "coretor": {
+      "corretor": "Corretor teste",
+      "idcorretor_int": "187",
+      "idcorretor_cv": "5928",
+      "idimobiliaria_cv": "274",
+      "idimobiliaria_int": "41250",
+      "email": "email_corretor@mail.com",
+      "telefone": "(11) 11111-1111",
+      "documento": "30828950504",
+      "cnpj_faturamento": "12399934000105",
+      "razaosocial_faturamento": "CORRETOR QC",
+      "nomefantasia_faturamento": "Central",
+      "data_nasc": "1970-01-28",
+      "sexo": "M",
+      "creci": "98547",
+      "imobiliaria": "IMOBILIÁRIA QC"
+    },
+    "condicoes": {
+      "valor_contrato": "323.000",
+      "valor_venda": "300.000",
+      "series": [
+        {
+          "idcondicao": "452556",
+          "indexador": "REAL",
+          "forma_pagamento": "BL",
+          "quantidade": "1",
+          "serie": "ATO - Bexs",
+          "possui_juros": "S",
+          "possui_correcao": "N",
+          "juros_condicao": "NC",
+          "juros_contrato": 1003.7,
+          "prestacao_saf": 1003.7,
+          "idserie_int": "1874",
+          "valor": "323.000",
+          "vencimento": "2020-12-22",
+          "fixo": 1
+        }
+      ],
+      "total_proposta": "323.000"
+    },
+    "comissoes": {
+      "1234": {
+        "comissao_para": "Corretor",
+        "cpf_faturamento": "13836782000145",
+        "cnpj_faturamento": "Corretor",
+        "comissao_quem": "CORRETOR QC",
+        "comissao_tipo": "Comissão",
+        "comissao_porcentagem": "2.00",
+        "comissao_valor": "6.460"
       },
-      "arquivo": {
-        "nome": "ATO - Boleto _ 24_02_2019 - 3.pdf",
-        "tipo": "application/pdf",
-        "tamanho": "16298",
-        "url": "http://dev.cvcrm.com.br/api/get/download/reservas_contratos|2020|01|3867/20200514091903_5ebd373739148.pdf"
+      "comissao_valortotal": "6.460",
+      "premio_valortotal": "0.00"
+    },
+    "idproposta_cv": "8417",
+    "idproposta_int": "743",
+    "vendida": null,
+    "observacoes": "Observação exemplo",
+    "data_contrato": "2022-04-12",
+    "data": "2021-04-19 11:45:43",
+    "contratos": [
+      {
+        "idcontrato": "1",
+        "contrato": "ATO - Bexs",
+        "data": "1874"
       }
-    }
-  ]
+    ],
+    "campos_adicionais": [
+      {
+        "idcampo_adicional": "1",
+        "nome": "Título do campo",
+        "valor": "valor gravado na reserva",
+        "nome_referencia": "nome da referência"
+      }
+    ]
+  }
 }
 ```
