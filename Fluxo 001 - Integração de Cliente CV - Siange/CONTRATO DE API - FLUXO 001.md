@@ -18,7 +18,7 @@
   
 ## API – NEXXERA
 
-* **Atividade 2** Notificação de Boleto
+* **Atividade 1** Notificação de Boleto
 Webhook
 ```sh 
  {
@@ -88,10 +88,19 @@ Webhook
  ```
  ## APIs CVCRM
 
-* **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
+* **Atividade 2** 
 
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
+```
+* **Atividade 3, Atividade 3.1, Atividade 3.2** :A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
+
+ ```sh 
+  URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
+```
+* **Atividade 4, Atividade 5, Atividade 6 e Atividade 7** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
+ ```sh 
+  URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
 ```
 
 ## Contrato de APIs Origem e Destino
@@ -177,7 +186,7 @@ Webhook
   "financingStatus": "string"
 }
 ```
-> **Atividade 3, Atividade 4, Atividade 5, Atividade 6, Atividade 7, Atividade 8 e Atividade 9** : Retornar os contratos das unidades do cliente
+> **Atividade 2** 
 
  ```diff
   + API GET://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
@@ -323,5 +332,57 @@ Webhook
       }
     ]
   }
+}
+```
+
+> **Atividade 3, Atividade 3.1, Atividade 3.2** :A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
+
+```diff
+  + API GET://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
+```
+```sh
+{
+  "total": 12340,
+  "limite": "5",
+  "lotes": [
+    {
+      "idlotepagamento": "123",
+      "situacao_lote": "1",
+      "valor_lote": "100.50",
+      "nome": "Lote de Pagamento #123",
+      "nota_fiscal": "0000",
+      "descricao": "Descrição de teste",
+      "observacao": "Observação de teste",
+      "comissoes": {
+        "idcomissao": "456",
+        "pagamentos": {
+          "idpagamento_comissao": "456",
+          "data_pagamento": "2021-07-17",
+          "idcomissao": "456",
+          "nota_fiscal_pagamento": "000001",
+          "situacao_comissao": "Pagamento Direto",
+          "situacao_pagamamento": "Programado",
+          "valor_pagamento": "90.37",
+          "data_medicao_pagamento": "2021-07-17",
+          "observacao_pagamento": "Observação de teste"
+        }
+      }
+    }
+  ]
+}
+```
+
+> **Atividade 4, Atividade 5, Atividade 6 e Atividade 7** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
+
+```diff
+  + API POST://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
+```
+```sh
+{
+  "idreserva_cv": 5458954,
+  "idcondicaoparcela_cv": 58625569,
+  "documento_cliente": "45670622804",
+  "situacaoparcela_cv": "EA",
+  "boleto_base64": "T2zDoSwgbXVuZG8h"
 }
 ```
