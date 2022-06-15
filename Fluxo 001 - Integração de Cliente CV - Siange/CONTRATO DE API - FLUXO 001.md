@@ -23,62 +23,62 @@
 ```
 ```diff
 - {
-          "instructions": [{
-              "type": "BOLETO",
-              "txid": "",
-              "endToEndId": "",
-              "fare_amount": "",
-              "environment": "HOMOLOGACAO",
-              "bank": 341,
-              "agreement_number": "1234567890",
-              "portfolio_id": "109",
-              "document_number": "123456",
-              "our_number": "123456",
-              "your_number": "123456",
-              "emission_date": "2021-09-13",
-              "due_date": "2021-10-13",
-              "nominal_amount": "999.88",
-              "return_code": 6,
-              "remittance_code": 0,
-              "description": "Liquidação",
-              "value_one": {
-                  "type": "VALOR_PAGO",
-                  "old_value": "0.00",
-                  "new_value": "125.00"
-              },
-              "value_two": {
-                  "type": "ACRESCIMO_COBRADO",
-                  "old_value": "0.00",
-                  "new_value": "0.05"
-              },
-              "value_three": {
-                  "type": "DESCONTO_CONCEDIDO",
-                  "old_value": "0.00",
-                  "new_value": "0.01"
-              },
-              "value_four": {
-                  "type": "ABATIMENTO_CONCEDIDO",
-                  "old_value": "0.00",
-                  "new_value": "0.02"
-              },
-              "value_five": {
-                  "type": "DATA_CREDITO",
-                  "old_value": 0,
-                  "new_value": "2019-01-29"
-              },
-              "value_six": {
-                  "type": "DATA_LIQUIDACAO",
-                  "old_value": 0,
-                  "new_value": "2019-03-25"
-              }
-          }]
-      }
+-          "instructions": [{
+-              "type": "BOLETO",
+-              "txid": "",
+-              "endToEndId": "",
+-              "fare_amount": "",
+-              "environment": "HOMOLOGACAO",
+-              "bank": 341,
+-              "agreement_number": "1234567890",
+-              "portfolio_id": "109",
+-              "document_number": "123456",
+-              "our_number": "123456",
+-              "your_number": "123456",
+-              "emission_date": "2021-09-13",
+-              "due_date": "2021-10-13",
+-              "nominal_amount": "999.88",
+-              "return_code": 6,
+-              "remittance_code": 0,
+-              "description": "Liquidação",
+-              "value_one": {
+-                  "type": "VALOR_PAGO",
+-                  "old_value": "0.00",
+-                  "new_value": "125.00"
+-              },
+-              "value_two": {
+-                  "type": "ACRESCIMO_COBRADO",
+-                  "old_value": "0.00",
+-                  "new_value": "0.05"
+-              },
+-              "value_three": {
+-                  "type": "DESCONTO_CONCEDIDO",
+-                  "old_value": "0.00",
+-                  "new_value": "0.01"
+-              },
+-              "value_four": {
+-                  "type": "ABATIMENTO_CONCEDIDO",
+-                  "old_value": "0.00",
+-                  "new_value": "0.02"
+-              },
+-              "value_five": {
+-                  "type": "DATA_CREDITO",
+-                  "old_value": 0,
+-                  "new_value": "2019-01-29"
+-              },
+-              "value_six": {
+-                  "type": "DATA_LIQUIDACAO",
+-                  "old_value": 0,
+-                  "new_value": "2019-03-25"
+-              }
+-          }]
+-      }
 ```
 ```diff
 - **Consulta de Títulos - Boleto / Pix**
 ```
-```sh
-{"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
+```diff
+-{"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
 ```
 ## APIs – SIENGE
 
