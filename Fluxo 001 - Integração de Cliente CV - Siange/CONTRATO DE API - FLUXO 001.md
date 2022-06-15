@@ -18,7 +18,7 @@
   
 ## API – NEXXERA
 
-* **Atividade 1** Notificação de Boleto
+* **Notificação de Boleto:** 
 Webhook
 ```sh 
  {
@@ -79,36 +79,36 @@ Webhook
 ```
 ## APIs – SIENGE
 
-* **Atividade 8 , Atividade 9 e Atividade 10** Busca um contrato de vendas.
+* **Busca um contrato de vendas:** 
  
 ```sh 
-  URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
+  URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
 ```
 
-* **Atividade 10.1, Atividade 11 e Atividade 12** : Atualiza dados de contratos vinculados ao crédito associativo
+* **Atualiza dados de contratos vinculados ao crédito associativo:**
 
  ```sh 
-  URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
+  URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
  ```
  ## APIs CVCRM
 
-* **Atividade 2** 
+* **/RESERVA** Esta API serve como um informativo ao sistema legado acerca das reservas que podem ser integradas como vendidas, por esse motivo não há solicitação de preenchimento de dados para a sua execução. Neste caso, como a requisição é do tipo 'GET', somente são necessários passar os parâmetros de autenticação por meio do HEADER, ou seja, a requisição não terá BODY.
 
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
 ```
-* **Atividade 3, Atividade 3.1, Atividade 3.2** :A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
+* **/LOTES** A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
 
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
 ```
-* **Atividade 4, Atividade 5, Atividade 6 e Atividade 7** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
+* **/BOLETOS** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
 ```
 ## Contrato de APIs Origem e Destino
 
-> **Atividade 8 , Atividade 9 e Atividade 10** : Busca um contrato de vendas.
+> **GET - SALES CONTRACTS** 
 
 ```diff
 + API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
@@ -172,24 +172,121 @@ Webhook
 }
 ```
 
-> **Atividade 10.1, Atividade 11 e Atividade 12** : Atualiza dados de contratos vinculados ao crédito associativo
-
+> **POST - SALES CONTRACTS** 
 
 ```diff
-+ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
++ API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
 ```
 
 ```sh
 {
-  "financialInstitutionNumber": "string",
-  "financialInstitutionDate": "string",
+  "enterpriseId": 0,
+  "externalId": "string",
+  "number": "string",
+  "contractDate": "string",
   "keysDeliveredAt": "string",
-  "registerPropertyDate": "string",
-  "sellingCategory": "string",
-  "financingStatus": "string"
+  "accountingDate": "string",
+  "readjustAfterOf": "string",
+  "saleType": "string",
+  "correctionType": "string",
+  "anualCorrectionType": "string",
+  "generateResidue": "string",
+  "diluteResidue": "string",
+  "financialPlanAccount": "string",
+  "value": 0,
+  "totalSellingValue": 0,
+  "note": "string",
+  "readjustEach": 0,
+  "readjustMonth": 0,
+  "lateInterestDaily": true,
+  "proRataIndexer": 0,
+  "interestType": "string",
+  "interestPercentage": 0,
+  "fineRate": 0,
+  "dailyLateInterestValue": 0,
+  "paymentConditions": [
+    {
+      "conditionTypeId": "string",
+      "installmentsNumber": 0,
+      "firstPayment": "string",
+      "totalValue": 0,
+      "matchMaturities": "string",
+      "bearerId": 0,
+      "indexerId": 0,
+      "baseDate": "string",
+      "interestType": "string",
+      "interestPercentage": 0,
+      "monthsGracePeriod": 0,
+      "baseDateInterest": "string"
+    }
+  ],
+  "salesContractCustomers": [
+    {
+      "id": 0,
+      "main": true,
+      "participationPercentage": 0,
+      "safePercentage": 0,
+      "participationPercentageSpouse": 0
+    }
+  ],
+  "salesContractUnits": [
+    {
+      "id": 0,
+      "main": true,
+      "participationPercentage": 0
+    }
+  ],
+  "brokers": [
+    {
+      "id": 0,
+      "main": true
+    }
+  ],
+  "salesContractGuarantors": [
+    {
+      "name": "string",
+      "cnpj": "string",
+      "cpf": "string",
+      "nationality": "string",
+      "numberIdentityCard": "string",
+      "professionId": 0,
+      "civilStatusId": 0,
+      "address": {
+        "cityId": 0,
+        "complement": "string",
+        "neighborhood": "string",
+        "number": "string",
+        "streetName": "string",
+        "zipCode": "string"
+      },
+      "spouse": {
+        "name": "string",
+        "cpf": "string",
+        "numberIndentityCard": "string",
+        "email": "string",
+        "birthDate": "string",
+        "address": {
+          "cityId": 0,
+          "complement": "string",
+          "neighborhood": "string",
+          "number": "string",
+          "streetName": "string",
+          "zipCode": "string"
+        }
+      },
+      "phones": [
+        {
+          "number": "string",
+          "main": true,
+          "type": "string",
+          "note": "string"
+        }
+      ]
+    }
+  ]
 }
 ```
-> **Atividade 2** 
+> **/RESERVA** 
 
  ```diff
   + API GET://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
@@ -338,7 +435,7 @@ Webhook
 }
 ```
 
-> **Atividade 3, Atividade 3.1, Atividade 3.2** :A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
+> **/LOTES**
 
 ```diff
   + API GET://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
@@ -375,7 +472,7 @@ Webhook
 }
 ```
 
-> **Atividade 4, Atividade 5, Atividade 6 e Atividade 7** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
+> **/BOLETOS** 
 
 ```diff
   + API POST://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
