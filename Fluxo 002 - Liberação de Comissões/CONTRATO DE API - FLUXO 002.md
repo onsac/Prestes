@@ -19,37 +19,48 @@
 
 ## APIs – SIENGE
 
-* **Atividade 3:** Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
+* **Inserção do título no Sienge com base em nota fiscal eletrônica recebida.** 
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/eletronic-invoice-bills/ 
 ```
-* **Atividade 17:** Atualiza o título no Sienge.
+* **Atualiza o título no Sienge.** 
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
 ```
-* **Atividade 18 e Atividade 19:** Inserção do título no Sienge.
+* **Inserção do título no Sienge.** 
 ```sh 
   URL PROD: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/ 
 ```
 ## APIs – CVCRM
 
-* **Atividade 2:** Essa interface trará informações pertinentes referente a todos os empreendimentos ativos em seu CV.
+* **/EMPREENDIMENTO** Essa interface trará informações pertinentes referente a todos os empreendimentos ativos em seu CV.
 ```sh 
   URL PROD: https://integracao.cvcrm.com.br/api/v1/prestes/empreendimento
 ```
-* **Atividade 3:** Essa integração coleta informações de requisições realizadas por sistemas legados e verifica se o dado inserido no campo documento existe ou não no Construtor de Vendas. Se já existir um corretor cadastrado com o mesmo documento, essa API irá atualizar os dados solicitados na requisição, se não irá cadastrá-los. Obs: Para esta verificação, o documento CPF deve ser válido. Somente será aceito um cadastro por CPF.
+* **/CORRETOR** Essa integração coleta informações de requisições realizadas por sistemas legados e verifica se o dado inserido no campo documento existe ou não no Construtor de Vendas. Se já existir um corretor cadastrado com o mesmo documento, essa API irá atualizar os dados solicitados na requisição, se não irá cadastrá-los. Obs: Para esta verificação, o documento CPF deve ser válido. Somente será aceito um cadastro por CPF.
 ```sh 
   URL PROD: https://integracao.cvcrm.com.br/api/v1/prestes/corretor
 ```
-* **Atividade 4:** A interface viabiliza a consulta das parcelas de pagamento das comissões retornando os dados, seus pagador e seu benficiário.
+* **GET - /COMISSAO** A interface viabiliza a consulta das parcelas de pagamento das comissões retornando os dados, seus pagador e seu benficiário.
 
 ```sh
-  URL PROD: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
+  URL GET: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
 ```
-
+* **PUT - /COMISSAO** Interface responsável por cadastrar boletos dos pagamentos das comissões dentro do Construtor de Vendas.
+```sh
+  URL PUT: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
+```
+```diff
+ - **ETAPA DE EMISSÃO DE NF**
+```
+## Portal Repasse
+```diff
+- **Faltando Documentação do Sistema**
+- Etapa Verificar Assinatura do Dossiê e Verificar assinatura do Contrato com o banco
+```
 ## Contrato de APIs Origem e Destino
 
-> **Atividade 3:** : Inserção do título no Sienge com base em nota fiscal eletrônica recebida.
+> **POST - ELETRONIC INVOICE BILLS**
 
 ```diff
 + API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/eletronic-invoice-bills/ 
@@ -76,7 +87,7 @@
   ]
 }
 ```
-> **Atividade 17:** : Atualiza o título no Sienge.
+> **PATCH - BILLS**
 
 ```diff
 + API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
@@ -88,7 +99,7 @@
   "documentNumber": "AX123"
 }
 ```
-> **Atividade 18 e Atividade 19:** : Inserção do título no Sienge.
+> **POST - BILLS** 
 
 ```diff
 + API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/
@@ -143,7 +154,7 @@
   ]
 }
 ```
-> **Atividade 2:** Essa interface trará informações pertinentes referente a todos os empreendimentos ativos em seu CV.
+> **/EMPREENDIMENTO** 
 
 ```diff
 + API GET: https://integracao.cvcrm.com.br/api/v1/prestes/empreendimento
@@ -253,7 +264,7 @@
   ]
 }
 ```
-> **Atividade 3:** Essa integração coleta informações de requisições realizadas por sistemas legados e verifica se o dado inserido no campo documento existe ou não no Construtor de Vendas. Se já existir um corretor cadastrado com o mesmo documento, essa API irá atualizar os dados solicitados na requisição, se não irá cadastrá-los. Obs: Para esta verificação, o documento CPF deve ser válido. Somente será aceito um cadastro por CPF.
+> **/CORRETOR** 
 
 ```diff
 + API POST: https://integracao.cvcrm.com.br/api/v1/prestes/corretor
@@ -294,7 +305,7 @@
 
 ```
 
-> **Atividade 4:** A interface viabiliza a consulta das parcelas de pagamento das comissões retornando os dados, seus pagador e seu benficiário.
+> **/COMISSAO** 
 
 ```diff
 + API GET: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
@@ -344,5 +355,18 @@
       ]
     }
   ]
+}
+```
+> **PUT - /COMISSAO** 
+
+```diff
++ API PUT: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
+```
+```sh
+{
+  "idpagamento": 5458954,
+  "situacao": "Programado",
+  "boleto_url": "http://www.site.com.br?arquivo=a",
+  "boleto_base64": "T2zDoSwgbXVuZG8h"
 }
 ```
