@@ -291,8 +291,8 @@
 ```
 > **GET - /RESERVA** 
 
- ```diff
-  + API GET://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
+```diff
++ API GET://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
 ```
 ```sh
 {
@@ -441,7 +441,7 @@
 > **GET - /LOTES**
 
 ```diff
-  + API GET://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
++ API GET://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
 ```
 ```sh
 {
@@ -478,7 +478,7 @@
 > **POST - /BOLETOS** 
 
 ```diff
-  + API POST://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
++ API POST://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
 ```
 ```sh
 {
