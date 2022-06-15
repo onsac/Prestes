@@ -18,8 +18,8 @@
   
 ## API – NEXXERA
 ```diff
-- **Notificação de Boleto:** 
-Webhook
+- **Notificação de Boleto** 
+- Webhook
 ```
 ```sh 
  {
@@ -74,7 +74,9 @@ Webhook
           }]
       }
 ```
-* **Consulta de Títulos - Boleto / Pix**
+```diff
+- **Consulta de Títulos - Boleto / Pix**
+```
 ```sh
 {"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
 ```
@@ -93,17 +95,17 @@ Webhook
  ```
  ## APIs CVCRM
 
-* **/RESERVA** Esta API serve como um informativo ao sistema legado acerca das reservas que podem ser integradas como vendidas, por esse motivo não há solicitação de preenchimento de dados para a sua execução. Neste caso, como a requisição é do tipo 'GET', somente são necessários passar os parâmetros de autenticação por meio do HEADER, ou seja, a requisição não terá BODY.
+* **GET - /RESERVA** Esta API serve como um informativo ao sistema legado acerca das reservas que podem ser integradas como vendidas, por esse motivo não há solicitação de preenchimento de dados para a sua execução. Neste caso, como a requisição é do tipo 'GET', somente são necessários passar os parâmetros de autenticação por meio do HEADER, ou seja, a requisição não terá BODY.
 
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
 ```
-* **/LOTES** A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
+* **GET - /LOTES** A interface viabiliza a consulta de lote do sistema CV. A consulta é realizada através dos dados enviados na URL, podendo conter id do lote, podendo também passar o limite e a página por parâmetro. A requisição retorna os dados do(s) lote(s) caso seja especifícado um id do lote, caso não, retorna todos os lotes.
 
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
 ```
-* **/BOLETOS** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
+* **POST - /BOLETOS** :Interface responsável por cadastrar boletos dentro do Construtor de Vendas quando a parcela da reserva for da série ato ou sinal.
  ```sh 
   URL PROD://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
 ```
@@ -287,7 +289,7 @@ Webhook
   ]
 }
 ```
-> **/RESERVA** 
+> **GET - /RESERVA** 
 
  ```diff
   + API GET://integracao.cvcrm.com.br/api/v1/prestes/cvio/reserva
@@ -436,7 +438,7 @@ Webhook
 }
 ```
 
-> **/LOTES**
+> **GET - /LOTES**
 
 ```diff
   + API GET://integracao.cvcrm.com.br/api/v1/prestes/cv/lotes/{idLote}
@@ -473,7 +475,7 @@ Webhook
 }
 ```
 
-> **/BOLETOS** 
+> **POST - /BOLETOS** 
 
 ```diff
   + API POST://integracao.cvcrm.com.br/api/v1/prestes/cv/boletos
