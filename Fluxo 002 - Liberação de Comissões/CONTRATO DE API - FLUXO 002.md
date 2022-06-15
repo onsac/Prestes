@@ -33,11 +33,11 @@
 ```
 ## APIs – CVCRM
 
-* **/EMPREENDIMENTO** Essa interface trará informações pertinentes referente a todos os empreendimentos ativos em seu CV.
+* **GET - /EMPREENDIMENTO** Essa interface trará informações pertinentes referente a todos os empreendimentos ativos em seu CV.
 ```sh 
   URL PROD: https://integracao.cvcrm.com.br/api/v1/prestes/empreendimento
 ```
-* **/CORRETOR** Essa integração coleta informações de requisições realizadas por sistemas legados e verifica se o dado inserido no campo documento existe ou não no Construtor de Vendas. Se já existir um corretor cadastrado com o mesmo documento, essa API irá atualizar os dados solicitados na requisição, se não irá cadastrá-los. Obs: Para esta verificação, o documento CPF deve ser válido. Somente será aceito um cadastro por CPF.
+* **POST - /CORRETOR** Essa integração coleta informações de requisições realizadas por sistemas legados e verifica se o dado inserido no campo documento existe ou não no Construtor de Vendas. Se já existir um corretor cadastrado com o mesmo documento, essa API irá atualizar os dados solicitados na requisição, se não irá cadastrá-los. Obs: Para esta verificação, o documento CPF deve ser válido. Somente será aceito um cadastro por CPF.
 ```sh 
   URL PROD: https://integracao.cvcrm.com.br/api/v1/prestes/corretor
 ```
@@ -154,7 +154,7 @@
   ]
 }
 ```
-> **/EMPREENDIMENTO** 
+> **GET - /EMPREENDIMENTO** 
 
 ```diff
 + API GET: https://integracao.cvcrm.com.br/api/v1/prestes/empreendimento
@@ -264,7 +264,7 @@
   ]
 }
 ```
-> **/CORRETOR** 
+> **POST - /CORRETOR** 
 
 ```diff
 + API POST: https://integracao.cvcrm.com.br/api/v1/prestes/corretor
@@ -305,7 +305,7 @@
 
 ```
 
-> **/COMISSAO** 
+> **GET - /COMISSAO** 
 
 ```diff
 + API GET: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
