@@ -6,7 +6,7 @@
 
 ## Desenho da arquitetura da solução
 <p align="center">
-    <img src="https://github.com/onsac/Prestes/blob/main/Imagens/Projeto%20OnSAC-Prestes.png" >
+    <img src="https://github.com/onsac/Prestes/blob/main/Imagens/OnSAC-Prestes_Desenho%20da%20arquitetura%20da%20solu%C3%A7%C3%A3o.pptx.png" >
 </p>
 ## Sumario de Contrato de API
 
