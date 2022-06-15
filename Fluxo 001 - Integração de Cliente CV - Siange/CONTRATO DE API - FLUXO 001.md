@@ -73,7 +73,7 @@ Webhook
           }]
       }
 ```
-* **Atividade 1.1**Consulta de Títulos - Boleto / Pix
+* **Consulta de Títulos - Boleto / Pix**
 ```sh
 {"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
 ```
