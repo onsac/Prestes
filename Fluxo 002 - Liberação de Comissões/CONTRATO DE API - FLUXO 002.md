@@ -51,7 +51,7 @@
   URL PUT: https://integracao.cvcrm.com.br/api/v1/prestes/pagamentos/comissao
 ```
 ```diff
- - **ETAPA DE EMISSÃO DE NF**
+- **ETAPA DE EMISSÃO DE NF**
 ```
 ## Portal Repasse
 ```diff
