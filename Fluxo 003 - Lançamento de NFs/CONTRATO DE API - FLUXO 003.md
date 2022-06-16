@@ -49,6 +49,26 @@ URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contrac
 ```sh
 URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contracts/measurements
 ```
+* **Busca os impostos do título:**
+
+```sh
+URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}/taxes
+```
+* **Inserção de anexo no título:**
+
+```sh
+URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}/attachments
+```
+* **Consulta solicitação de compra:**
+
+```sh
+URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+```
+* **Realiza leitura de títulos:**
+
+```sh
+URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/defaulters-receivable-bills
+```
 ## APIs NEXXERA
 
 
@@ -260,6 +280,104 @@ URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contra
       "buildingUnitId": 3,
       "itemId": 25,
       "measuredQuantity": 45.4918
+    }
+  ]
+}
+```
+> **GET - /BILLS/{BILLID}/TAXES** 
+
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}/taxes
+```
+```sh
+{
+  "resultSetMetadata": {
+    "count": 0,
+    "offset": 0,
+    "limit": 0
+  },
+  "results": [
+    {
+      "taxId": 0,
+      "ibgeCityId": "4205407",
+      "rate": 0,
+      "amount": 0,
+      "taxableBaseAmount": 0,
+      "taxRateMarker": 0,
+      "usesIncomeTaxTable": true
+    }
+  ]
+}
+```
+> **POST - /BILLS/{BILLID}/ATTACHMENTS** 
+
+```diff
++ API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}/attachments
+```
+```sh
+{
+  "status": 0,
+  "developerMessage": "Developer description message",
+  "clientMessage": "Client description message."
+}
+```
+> **GET - /PURCHASE-REQUESTS/{PURCHASEREQUESTID}** 
+
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-requests/{purchaseRequestId}
+```
+```sh
+{
+  "id": 2104,
+  "buildingId": 300,
+  "departamentId": 5,
+  "requesterUser": "USER",
+  "requestDate": "2018-01-03",
+  "notes": "Annotation",
+  "status": "PENDING",
+  "consitent": "CONSISTENT",
+  "createdBy": "USER",
+  "createdAt": "2018-03-11T14:20:00.000-03:00",
+  "modifiedBy": "ANOTHERUSER",
+  "modifiedAt": "2018-04-02T18:20:00.000-03:00"
+}
+```
+> **GET - /DEFAULTERS-RECEIVABLE-BILLS** 
+
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/defaulters-receivable-bills
+```
+```sh
+{
+  "data": [
+    {
+      "receivableBillId": 0,
+      "issueDate": "string",
+      "documentNumber": "string",
+      "units": "string",
+      "receivableBillValue": 0,
+      "defaulterInstallments": [
+        {
+          "installmentId": 0,
+          "conditionType": "string",
+          "dueDate": "string",
+          "daysOfDelay": 0,
+          "correctedValueWithoutAdditions": "string",
+          "proRata": "string",
+          "interest": "string",
+          "fine": "string",
+          "totalAdditions": "string",
+          "correctedValueWithAdditions": "string"
+        }
+      ],
+      "defaulterJudicialActivities": [
+        {
+          "recordDate": "string",
+          "situation": "string",
+          "concluded": "string",
+          "observation": "string"
+        }
+      ]
     }
   ]
 }
