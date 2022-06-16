@@ -78,7 +78,10 @@
 - **Consulta de Títulos - Boleto / Pix**
 ```
 ```diff
--{"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
+- URL GET: https://cobranca-eletronica-core-dev.cloudint.nexxera.com/v1/billet
+```
+```diff
+- {"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
 ```
 ## APIs – SIENGE
 
