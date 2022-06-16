@@ -49,6 +49,27 @@ URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contrac
 ```sh
 URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contracts/measurements
 ```
+## APIs NEXXERA
+
+```diff
+- **Consulta de Títulos - Boleto / Pix**
+```
+```diff
+- URL GET: https://cobranca-eletronica-core-dev.cloudint.nexxera.com/v1/billet
+```
+```diff
+- {"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
+```
+```diff
+- **Inclusão de Títulos - Boleto / Pix**
+```
+```diff
+- URL POST: https://cobranca-eletronica-core-dev.cloudint.nexxera.com/v1/billet
+```
+```diff
+- {"our_number": null, "digitable_line": "", "status": "", "message": {"key": ["This field is required."], "hash": ["This field is required."]}, "pdf_content": ""}
+```
+
 
 ## Contrato de APIs Origem e Destino
 
