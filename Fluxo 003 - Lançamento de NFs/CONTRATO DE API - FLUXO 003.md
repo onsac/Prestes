@@ -44,6 +44,12 @@ URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills
 URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contracts/measurements/clearing
 ```
 
+* **Cria uma nova medição para o respectivo contrato e obra:**
+
+```sh
+URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contracts/measurements
+```
+
 ## Contrato de APIs Origem e Destino
 
 > **GET - /CREDITORS/{CREDITORID** 
@@ -66,7 +72,7 @@ URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contrac
 
 ```
 
-> **POST - /BILLS** 
+> **GET - /BILLS** 
 
 ```diff
 + API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills
@@ -199,7 +205,7 @@ URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contrac
 
 ```
 
-> **POST - SUPPLY-CONTRACTS/MEASUREMENTS/CLEARING** 
+> **GET - SUPPLY-CONTRACTS/MEASUREMENTS/CLEARING** 
 
 ```diff
 + API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contracts/measurements/clearing
@@ -217,6 +223,27 @@ URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contrac
   "bills": [
     {
       "billId": 1
+    }
+  ]
+}
+```
+
+> **POST - SUPPLY-CONTRACTS/MEASUREMENTS** 
+
+```diff
++ API POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/supply-contracts/measurements
+```
+```sh
+{
+  "measurementDate": "2021-04-18",
+  "dueDate": "2021-06-22",
+  "notes": "Lorem ipsum dolor sit amet.",
+  "makeUnauthorized": true,
+  "items": [
+    {
+      "buildingUnitId": 3,
+      "itemId": 25,
+      "measuredQuantity": 45.4918
     }
   ]
 }
