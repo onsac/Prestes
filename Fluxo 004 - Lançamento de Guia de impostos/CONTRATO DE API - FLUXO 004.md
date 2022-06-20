@@ -9,3 +9,12 @@
   Fluxo 004 - Lançamento de Guia de impostos
 </p>
 
+## APIs SIENGE
+
+* **Busca o credor no Sienge:** 
+ 
+```sh 
+  URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/creditors/{creditorId}
+```
+
+## Contrato de APIs Origem e Destino
