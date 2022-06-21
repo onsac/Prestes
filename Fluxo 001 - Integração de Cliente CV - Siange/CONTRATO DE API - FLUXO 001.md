@@ -94,6 +94,17 @@
  ```sh 
   URL POST: https://api.sienge.com.br/produtoeinovacao/public/api/v1/sales-contracts/{id}
  ```
+ * **Busca os títulos no Sienge pelo número:**
+
+ ```sh 
+  URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/receivable-bills/{receivableBillId}
+ ```
+ 
+* **Busca as parcelas do título:**
+
+ ```sh 
+  URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/receivable-bills/{receivableBillId}/installments
+ ```
  ## APIs CVCRM
 
 * **GET - /RESERVA** Esta API serve como um informativo ao sistema legado acerca das reservas que podem ser integradas como vendidas, por esse motivo não há solicitação de preenchimento de dados para a sua execução. Neste caso, como a requisição é do tipo 'GET', somente são necessários passar os parâmetros de autenticação por meio do HEADER, ou seja, a requisição não terá BODY.
@@ -286,6 +297,52 @@
           "note": "string"
         }
       ]
+    }
+  ]
+}
+```
+> **GET - RECEIVABLE-BILLS/{RECEIVABLEBILLID}** 
+
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/receivable-bills/{receivableBillId}
+```
+
+```sh
+{
+  "customerId": 0,
+  "receivableBillId": 0,
+  "documentId": "string",
+  "documentNumber": "string",
+  "issueDate": "2018-12-22",
+  "receivableBillValue": 0,
+  "companyId": 0,
+  "defaulting": true,
+  "subjudice": true,
+  "note": "string"
+}
+```
+> **GET - RECEIVABLE-BILLS/{RECEIVABLEBILLID}/INSTALLMENTS** 
+
+```diff
++ API GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/receivable-bills/{receivableBillId}/installments
+```
+
+```sh
+{
+  "resultSetMetadata": {
+    "count": 0,
+    "offset": 0,
+    "limit": 0
+  },
+  "results": [
+    {
+      "receivableBillId": 0,
+      "installmentId": 0,
+      "carrierId": 0,
+      "conditionTypeId": "PM",
+      "dueDate": "2018-01-10",
+      "balanceDue": "Valor do saldo devedor original da parcela | Exemplo: 1000.00",
+      "generatedTicket": true
     }
   ]
 }
