@@ -11,7 +11,7 @@
 
 ## Workflow do Fluxo 004
 <p align="center">
-    <img src="https:https://github.com/onsac/Prestes/blob/main/Fluxo%20004%20-%20Lan%C3%A7amento%20de%20Guia%20de%20impostos/Desenho%20Fluxo%20004.png" >
+    <img src="https://github.com/onsac/Prestes/blob/main/Fluxo%20004%20-%20Lan%C3%A7amento%20de%20Guia%20de%20impostos/Desenho%20Fluxo%20004.png" >
 </p>
 
 ## APIs SIENGE
