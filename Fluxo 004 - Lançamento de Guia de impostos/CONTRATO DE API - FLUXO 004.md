@@ -9,6 +9,11 @@
   Fluxo 004 - Lançamento de Guia de impostos
 </p>
 
+## Workflow do Fluxo 004
+<p align="center">
+    <img src="https://github.com/onsac/Prestes/blob/main/Fluxo%20003%20-%20Lan%C3%A7amento%20de%20NFs/Desenho%20do%20Fluxo%20003.png" >
+</p>
+
 ## APIs SIENGE
 
 * **Inserção do título no Sienge:** 
