@@ -41,6 +41,18 @@
 ```sh 
   URL PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/bills/{billId}
 ```
+* **Busca todos os centros de custo no Sienge:** 
+ 
+```sh 
+  URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/cost-centers/{costCenterId}
+```
+* **Departamento conforme Planilha:** 
+ 
+```sh 
+  URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/departments/{departmentId}
+```
+
+
 ## Contrato de APIs Origem e Destino
 > **POST - /BILLS/**
 
@@ -177,3 +189,45 @@
 }
 ```
 
+> **GET - /COST-CENTERS/{COSTCENTERID}**
+
+```diff
++ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/cost-centers/{costCenterId}
+```
+
+```sh
+{
+  "id": 0,
+  "name": "string",
+  "idCompany": 0,
+  "cnpj": "string",
+  "buildingSectors": [
+    {
+      "id": "string",
+      "name": "string",
+      "accountableId": "string",
+      "accountableName": "string"
+    }
+  ]
+}
+```
+> **GET - /DEPARTMENTS/{DEPARTMENTID}**
+
+```diff
++ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/departments/{departmentId}
+```
+
+```sh
+{
+  "departmentId": 1,
+  "departmentName": "Departamento 1"
+}
+```
+
+> **GET - /DEPARTMENTS/{DEPARTMENTID}**
+
+```diff
++ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/departments/{departmentId}
+```
+
+```sh
