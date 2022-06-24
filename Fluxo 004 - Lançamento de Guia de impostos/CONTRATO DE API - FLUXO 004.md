@@ -51,8 +51,11 @@
 ```sh 
   URL GET: https://api.sienge.com.br/produtoeinovacao/public/api/v1/departments/{departmentId}
 ```
-
-
+* **Realizar liberação do pagamento:** 
+ 
+```sh 
+  URL PUT: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-orders/{purchaseOrderId}/authorize
+```
 ## Contrato de APIs Origem e Destino
 > **POST - /BILLS/**
 
@@ -227,7 +230,18 @@
 > **GET - /DEPARTMENTS/{DEPARTMENTID}**
 
 ```diff
-+ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/departments/{departmentId}
-```
++ API PATCH: https://api.sienge.com.br/produtoeinovacao/public/api/v1/purchase-orders/{purchaseOrderId}/authorize
 
 ```sh
+{
+  "status": "string",
+  "developerMessage": "string",
+  "clientMessage": "string",
+  "errors": [
+    {
+      "field": "string",
+      "message": "string"
+    }
+  ]
+}
+```
