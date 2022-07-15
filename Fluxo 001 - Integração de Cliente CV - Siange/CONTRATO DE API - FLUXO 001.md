@@ -29,7 +29,7 @@
 
 * **CVCRM:** Pesquisar reserva não integradas `API` `Documentação`
  - Identificar `ID Boleto Ato`
-    - Chamar API **Nexxera** consultar status do boleto `API``Documentação`
+    - Chamar API **Nexxera** consultar status do boleto `API` `Documentação`
     - Se o boleto pago
     - **CVCRM** reserva altera `ID Situação`
 
