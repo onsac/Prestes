@@ -21,7 +21,7 @@
 
 Indentificar - <sub>status</sub> = "Concluido"
 Identificar "ID Reserva" - Subject
-
+'git status'
 :arrow_right: CVCRM Reserva alterar ID Situação para **contrato assinado**
 
 ## APIs – SIENGE
