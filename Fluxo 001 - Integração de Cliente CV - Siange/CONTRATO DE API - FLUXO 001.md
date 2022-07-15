@@ -17,8 +17,12 @@
 
 ## 01 - Assinatura
 
-* **Docusign**: Pesquisar assinatura envelope "API" "Documento"
-Indentificar - ´status´
+**Docusign**: Pesquisar assinatura envelope "API" "Documento"
+
+Indentificar - <sub>status</sub> = "Concluido"
+Identificar "ID Reserva" - Subject
+
+:arrow_right: CVCRM Reserva alterar ID Situação para **contrato assinado**
 
 ## APIs – SIENGE
 
