@@ -19,9 +19,9 @@
 
 **Docusign**: Pesquisar assinatura envelope "API" "Documento"
 
-Indentificar - <sub>status</sub> = "Concluido"
+Indentificar - [status] = "Concluido"
 Identificar "ID Reserva" - Subject
-'git status'
+
 :arrow_right: CVCRM Reserva alterar ID Situação para **contrato assinado**
 
 ## APIs – SIENGE
