@@ -17,12 +17,33 @@
 
 ## 01 - Assinatura
 
-**Docusign**: Pesquisar assinatura envelope "API" "Documento"
+* **Docusign:** Pesquisar assinatura envelope `API` `Documento`
 
-Indentificar - [status] = "Concluido"
-Identificar "ID Reserva" - Subject
+- Indentificar - `status` = **Concluido**
 
-:arrow_right: CVCRM Reserva alterar ID Situação para **contrato assinado**
+- Identificar `ID Reserva` - `Subject`
+
+* **CVCRM** Reserva alterar ID Situação para **contrato assinado**
+
+## 02 - Pagamento Ato
+
+* **CVCRM:** Pesquisar reserva não integradas `API` `Documentação`
+ - Identificar `ID Boleto Ato`
+    - Chamar API **Nexxera** consultar status do boleto `API``Documentação`
+    - Se o boleto pago
+    - **CVCRM** reserva altera `ID Situação`
+
+## 03 - Se assinatura OK e Ato Pago Ok
+
+Pesquisar reserva não integrada `API` `Documentação`
+
+ - Verificar Situação
+    - Integração contrato Sienge `API` `Documentação`
+ - Sienge > Comercial > Vendas > Contratos > Emisão :arrow_right: `?API` `?Documentação`
+    - Ajustar Data Base do Titulo de Ato 
+        > Data 1° vencimento para data do pagamento Ato
+    - Conferir `Preço Total da Venda` .Bath com `Total das condições`
+    - Consultar Contratos  > Salvar > Ok :arrow_right: Gerar o titulo de conta a receber
 
 ## APIs – SIENGE
 
