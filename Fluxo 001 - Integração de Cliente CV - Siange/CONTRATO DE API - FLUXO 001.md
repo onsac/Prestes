@@ -23,7 +23,7 @@
 
 - Identificar `ID Reserva` - `Subject`
 
-* **CVCRM** Reserva alterar ID Situação para **contrato assinado**
+* **CVCRM** Reserva alterar `ID Situação` para **contrato assinado**
 
 ## 02 - Pagamento Ato
 
