@@ -17,19 +17,20 @@
 
 ## 003 - Lançamento de NFs 
 
-<p> 01-Pega nota</p>
-<p> 02-Captura informação</p>
-<p> 03-Abre chamado - comparar "api" "doc" GLPI</p>
+**01-Pega nota**
 
-   * **-Tipo de despesas (categoria conforme a compra)**
-   * **-Número do pedido**
-   * **-Centro de custo**
-   * **-Departamento**
-   * **-Valor**
-   * **-Data de pagamento**
-   * **-Anexo NF**
+**02-Captura informação**
+**03-Abre chamado - comparar "api" "doc" GLPI**
 
-<p> 04- Efetuar lançamento no sienge</p>
+   -Tipo de despesas (categoria conforme a compra).
+   -Número do pedido.
+   -Centro de custo.
+   -Departamento.
+   -Valor.
+   -Data de pagamento.
+   -Anexo NF.
+
+**04- Efetuar lançamento no sienge**
 
 
 
