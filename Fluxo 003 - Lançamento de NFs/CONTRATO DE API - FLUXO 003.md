@@ -15,6 +15,25 @@
     <img src="https://github.com/onsac/Prestes/blob/main/Fluxo%20003%20-%20Lan%C3%A7amento%20de%20NFs/Desenho%20do%20Fluxo%20003.png" >
 </p>
 
+## 003 - Lançamento de NFs 
+
+<p align="center"> 01-Pega nota</p>
+<p align="center"> 02-Captura informação</p>
+<p align="center"> 03-Abre chamado - comparar "api" "doc" GLPI</p>
+```sh 
+   -Tipo de despesas (categoria conforme a compra)
+   -Número do pedido
+   -Centro de custo
+   -Departamento
+   -Valor
+   -Data de pagamento
+   -Anexo NF
+```
+<p align="center"> 04- Efetuar lançamento no <sub>sienge</sub></p>
+
+
+
+
 ## APIs Sienge
 
 * **Busca o credor no Sienge:** 
