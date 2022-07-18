@@ -17,21 +17,50 @@
 
 ## 003 - Lançamento de NFs 
 
-**01-Pega nota**
+**01 - Pega nota**
 
-**02-Captura informação**
-**03-Abre chamado - comparar "api" "doc" GLPI**
+**02 - Captura informação**
+**03 - Abre chamado - comparar "api" "doc" GLPI**
 
-   -Tipo de despesas (categoria conforme a compra).
-   -Número do pedido.
-   -Centro de custo.
-   -Departamento.
-   -Valor.
-   -Data de pagamento.
-   -Anexo NF.
+  <p> -Tipo de despesas (categoria conforme a compra).</p>
+   <p>-Número do pedido.</p>
+   <p>-Centro de custo.</p>
+   <p>-Departamento.</p>
+   <p>-Valor.</p>
+   <p>-Data de pagamento.</p>
+   <p>-Anexo NF.</p>
 
-**04- Efetuar lançamento no sienge**
+**04 - Efetuar lançamento no sienge**
+    Sienge> Suprimentos> Comprar> Notas fiscais de compra> Cadastros> inserir novos dados da informação> Validam NF
+          <p> - CNPJ</p>
+          <P> - Razão social </p>
+          <p> - NF, número da nota </p>
+          <p> - Data de emissão </p>
+    Confirmar o lançamento e contabilizar manualmente o saldo do pedido de nota parcial
+**05 - Vai para autorização**
+**06 - Abrir chamado de serviço**
+**07 - Efetuar pagamento no Sienge**
+    Sienge> Suprimentos> Contratos e medições> inserir novos dados da informação> Valida NF  
+          <p> - CNPJ</p>
+          <P> - Razão social </p>
+          <p> - NF, número da nota </p>
+          <p> - Valor </p>
+          <p> - Valor da nota </p>
+          <p> - Medição </p>
+          <p> - Data de emissão da NF </p>
+          <p> - Confimar lançamento </p>
+          <p> - Data automatica de 30 dias para o vencimento </p>
+**08 - Analisar  titulo: Impostos da NF e contrato (Se necessaário, informar tributotarios e divergencias**
 
+   **(20,21,22,24,26,27,29,30,31-> conferencia manual)**
+   
+   36 Analisar titulos não pagos (sienge e Nexxera)
+      Pedido de alteração necessária ao solicitante
+   
+     
+     
+
+     
 
 
 
